@@ -12,20 +12,27 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import environ
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+env = environ.Env()
+environ.Env.read_env(BASE_DIR / ".env")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-xx3q%9sv*l5ljy-vfc3_xrrbbpdpcbrt$%t7d=$h-t5)hmajlj"
+SECRET_KEY = env(
+    "SECRET_KEY",
+    default="django-insecure-xx3q%9sv*l5ljy-vfc3_xrrbbpdpcbrt$%t7d=$h-t5)hmajlj",
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
 
 
 # Application definition
@@ -75,8 +82,7 @@ WSGI_APPLICATION = "LittleLemon.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        env.db("DATABASE_URL", default="sqlite:///db.sqlite3"),
     }
 }
 
