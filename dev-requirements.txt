@@ -121,6 +121,9 @@ distlib==0.3.6 ; python_version >= "3.10" and python_version < "4.0" \
 django-debug-toolbar==4.1.0 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:a0b532ef5d52544fd745d1dcfc0557fa75f6f0d1962a8298bd568427ef2fa436 \
     --hash=sha256:f57882e335593cb8e74c2bda9f1116bbb9ca8fc0d81b50a75ace0f83de5173c7
+django-environ==0.10.0 ; python_version >= "3.10" and python_version < "4" \
+    --hash=sha256:510f8c9c1d0a38b0815f91504270c29440a0cf44fab07f55942fa8d31bbb9be6 \
+    --hash=sha256:b3559a91439c9d774a9e0c1ced872364772c612cdf6dc919506a2b13f7a77225
 django==4.2.3 ; python_version >= "3.10" and python_version < "4.0" \
     --hash=sha256:45a747e1c5b3d6df1b141b1481e193b033fd1fdbda3ff52677dc81afdaacbaed \
     --hash=sha256:f7c7852a5ac5a3da5a8d5b35cc6168f31b605971441798dac845f17ca8028039
