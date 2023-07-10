@@ -55,7 +55,9 @@ if DEBUG:
         "django_fastdev",
     ]
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS
+LOCAL_APPS = ["restaurant"]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
