@@ -118,12 +118,17 @@ defusedxml==0.7.1 ; python_version >= "3.9" and python_version < "4.0" \
 distlib==0.3.6 ; python_version >= "3.9" and python_version < "4.0" \
     --hash=sha256:14bad2d9b04d3a36127ac97f30b12a19268f211063d8f8ee4f47108896e11b46 \
     --hash=sha256:f35c4b692542ca110de7ef0bea44d73981caeb34ca0b9b6b2e6d7790dda8f80e
+django-browser-reload==1.11.0 ; python_version >= "3.9" and python_version < "4.0" \
+    --hash=sha256:ce9576bd31562fda01dd8fca73e07696a9a1c7138d2aee084abfb7315dc633a4 \
+    --hash=sha256:fe232478a58e9e5d8b703537651d5a76b017d2208d1da5dfbe013937b5cca065
 django-debug-toolbar==4.1.0 ; python_version >= "3.9" and python_version < "4.0" \
     --hash=sha256:a0b532ef5d52544fd745d1dcfc0557fa75f6f0d1962a8298bd568427ef2fa436 \
     --hash=sha256:f57882e335593cb8e74c2bda9f1116bbb9ca8fc0d81b50a75ace0f83de5173c7
 django-environ==0.10.0 ; python_version >= "3.9" and python_version < "4" \
     --hash=sha256:510f8c9c1d0a38b0815f91504270c29440a0cf44fab07f55942fa8d31bbb9be6 \
     --hash=sha256:b3559a91439c9d774a9e0c1ced872364772c612cdf6dc919506a2b13f7a77225
+django-fastdev==1.7.3 ; python_version >= "3.9" and python_version < "4.0" \
+    --hash=sha256:3eb0250c5a01407e07ea34648d8c5a4112ead0324685ada0deacf10e121e7482
 django==4.2.3 ; python_version >= "3.9" and python_version < "4.0" \
     --hash=sha256:45a747e1c5b3d6df1b141b1481e193b033fd1fdbda3ff52677dc81afdaacbaed \
     --hash=sha256:f7c7852a5ac5a3da5a8d5b35cc6168f31b605971441798dac845f17ca8028039
