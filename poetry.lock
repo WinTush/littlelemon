@@ -350,6 +350,20 @@ docs = ["furo (>=2021.8.17b43,<2021.9.0)", "sphinx (>=3.5.0)", "sphinx-notfound-
 testing = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)"]
 
 [[package]]
+name = "django-fastdev"
+version = "1.7.3"
+description = "Django-fastdev is an app that makes it faster and more fun to develop Django apps"
+category = "dev"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-fastdev-1.7.3.tar.gz", hash = "sha256:3eb0250c5a01407e07ea34648d8c5a4112ead0324685ada0deacf10e121e7482"},
+]
+
+[package.dependencies]
+Django = ">=2.0"
+
+[[package]]
 name = "djangorestframework"
 version = "3.14.0"
 description = "Web APIs for Django, made easy."
@@ -1343,4 +1357,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "c9a47364a6d05ccfc4ddd07cbe8458bbca0bec9bf933cd877fa6f76e926be553"
+content-hash = "f5fad7b32b4b803acd9bc6189e4dd9fc320a83763662bf2da93830285833e72d"

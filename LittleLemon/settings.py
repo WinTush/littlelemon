@@ -52,6 +52,7 @@ if DEBUG:
     THIRD_PARTY_APPS += [
         "debug_toolbar",
         "django_browser_reload",
+        "django_fastdev",
     ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS
