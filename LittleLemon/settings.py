@@ -101,7 +101,13 @@ WSGI_APPLICATION = "LittleLemon.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {"default": env.db("DATABASE_URL", default="sqlite:///db.sqlite3")}
+DATABASES = {
+    # DATABASE_URL format: "mysql://user:password@host:port/dbname"
+    "default": env.db(
+        "DATABASE_URL", default="mysql://root@127.0.0.1:3306/LittleLemon"
+    ),
+}
+DATABASES["default"]["OPTIONS"] = {"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"}
 
 
 # Password validation
