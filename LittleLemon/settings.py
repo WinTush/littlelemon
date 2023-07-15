@@ -59,7 +59,7 @@ if DEBUG:
         "django_fastdev",
     ]
 
-LOCAL_APPS = ["restaurant"]
+LOCAL_APPS = ["restaurant", "api"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
