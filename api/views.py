@@ -1,16 +1,11 @@
-from rest_framework import generics, viewsets
+from rest_framework import viewsets
 
 from restaurant.models import Booking, Menu
 
 from .serializers import BookingSerializer, MenuSerializer
 
 
-class MenuItemsView(generics.ListCreateAPIView):
-    queryset = Menu.objects.all()
-    serializer_class = MenuSerializer
-
-
-class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
+class MenuViewSet(viewsets.ModelViewSet):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
