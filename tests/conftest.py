@@ -10,4 +10,4 @@ register(MenuFactory)
 
 @pytest.fixture
 def api_client():
-    return APIClient
+    return APIClient()
