@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from restaurant.models import Menu
+from restaurant.models import Booking, Menu
 
 
 class MenuSerializer(serializers.ModelSerializer):
@@ -15,3 +15,9 @@ class MenuSerializer(serializers.ModelSerializer):
                 "min_value": 0,
             },
         }
+
+
+class BookingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Booking
+        fields = "__all__"
