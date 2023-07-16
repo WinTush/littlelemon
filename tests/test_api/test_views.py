@@ -5,24 +5,24 @@ from rest_framework import status
 pytestmark = pytest.mark.django_db
 
 
-class TestMenuItemsView:
+class TestMenuListView:
+    url = reverse("menu-list")
+
     def test_status_code(self, api_client):
-        url = reverse("menu-list")
-        response = api_client.get(url)
+        response = api_client.get(self.url)
 
         assert response.status_code == status.HTTP_200_OK
 
     def test_create_menu_item(self, api_client):
-        url = reverse("menu-list")
         data = {"title": "Pizza", "price": "10.99"}
-        response = api_client.post(url, data)
+        response = api_client.post(self.url, data)
 
         assert response.status_code == status.HTTP_201_CREATED
         assert response.data["title"] == data["title"]
         assert response.data["price"] == data["price"]
 
 
-class TestSingleMenuItemView:
+class TestMenuDetailView:
     def test_status_code(self, api_client, menu_factory):
         menu = menu_factory()
         url = reverse("menu-detail", args=[menu.id])
@@ -55,27 +55,29 @@ class TestSingleMenuItemView:
         assert response.status_code == status.HTTP_204_NO_CONTENT
 
 
-class TestBookingViewSet:
+class TestBookingListView:
+    url = reverse("booking-list")
+
     def test_status_code(self, api_client):
-        url = reverse("booking-list")
-        response = api_client.get(url)
+        response = api_client.get(self.url)
 
         assert response.status_code == status.HTTP_200_OK
 
     def test_create_booking(self, api_client):
-        url = reverse("booking-list")
         data = {
             "name": "John Doe",
             "no_of_guests": 4,
             "booking_date": "2022-01-01T12:00:00Z",
         }
-        response = api_client.post(url, data)
+        response = api_client.post(self.url, data)
 
         assert response.status_code == status.HTTP_201_CREATED
         assert response.data["name"] == data["name"]
         assert response.data["no_of_guests"] == data["no_of_guests"]
         assert response.data["booking_date"] == data["booking_date"]
 
+
+class TestBookingDetailView:
     def test_get_booking(self, api_client, booking_factory):
         booking = booking_factory(name="John Doe")
         url = reverse("booking-detail", args=[booking.id])
